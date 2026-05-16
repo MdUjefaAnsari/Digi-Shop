@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sign In - Digi-Shop</title>
+
+  <link rel="stylesheet" href="auth.css">
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+  <!-- LEFT IMAGE -->
+  <div class="auth-image">
+
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="login">
+
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="auth-form">
+
+    <h2>Welcome Back</h2>
+
+    <p>Login to continue shopping</p>
+
+    <input type="text" id="login-name" placeholder="Enter Name">
+
+    <input type="password" placeholder="Password">
+
+    <button onclick="login()">Sign In</button>
+
+    <a href="signup.html">Create new account</a>
+
+    <a href="index.html" class="home-btn">← Back to Home</a>
+
+  </div>
+
+</div>
+
+<script>
+
+function login(){
+
+  const name = document.getElementById("login-name").value;
+
+  if(name === ""){
+    alert("Enter name");
+    return;
+  }
+
+  localStorage.setItem("user", name);
+
+  alert("Login Successful");
+
+  window.location.href = "index.html";
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sign Up - Digi-Shop</title>
+
+  <link rel="stylesheet" href="auth.css">
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+  <!-- LEFT IMAGE -->
+  <div class="auth-image">
+
+    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="signup">
+
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="auth-form">
+
+    <h2>Create Account</h2>
+
+    <p>Join ShopEasy today</p>
+
+    <input type="text" id="signup-name" placeholder="Full Name">
+
+    <input type="email" placeholder="Email">
+
+    <input type="password" placeholder="Password">
+
+    <button onclick="signup()">Sign Up</button>
+
+    <a href="signin.html">Already have account?</a>
+
+    <a href="index.html" class="home-btn">← Back to Home</a>
+
+  </div>
+
+</div>
+
+<script>
+
+function signup(){
+
+  const name = document.getElementById("signup-name").value;
+
+  if(name === ""){
+    alert("Enter name");
+    return;
+  }
+
+  localStorage.setItem("user", name);
+
+  alert("Account Created");
+
+  window.location.href = "index.html";
+}
+
+</script>
+
+</body>
+</html>
